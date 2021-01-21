@@ -1,7 +1,7 @@
 let x = 100;
 let y = 30;
-let speed = 2;
-let speedy = 2;
+let speed = 1;
+let speedy = 1;
 let shapeHeight = 20;
 let shapeWidth = 20;
 let r = 230;
@@ -13,7 +13,8 @@ let reposX;
 let reposY;
 let offsetX;
 let offsetY;
-let offsetArray = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10];
+let offsetArrayY = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10];
+let offsetArrayX = [10,9,8,7,6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10];
 let upordown;
 let indexVal = 0;
 
@@ -37,8 +38,8 @@ function setup() {
     fill(r,g,b);
     //strokeWeight(10);
     //stroke(200,20,20);
-    offsetX = offsetArray[indexVal];
-    offsetY = offsetArray[indexVal];
+    offsetX = offsetArrayX[indexVal];
+    offsetY = offsetArrayY[indexVal];
     //ellipse(x,y,shapeHeight,shapeWidth);
     rect(x, y+offsetY, 10, 5);
     //ellipse(y,x,shapeHeight,shapeWidth);
