@@ -12,6 +12,7 @@ let offsetX;
 let offsetY;
 let offsetArrayY = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10];
 let offsetArrayX = [10,9,8,7,6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10];
+//let offsetVal = 10;
 let upordown;
 let indexVal = 0;
 let frameVal = 60;
@@ -34,6 +35,14 @@ function setup() {
   
   function draw() {
     frameRate(frameVal);
+    /*
+    let offsetArrayY = new Array(2 * offsetVal);
+    let offsetArrayX = new Array(2 * offsetVal);
+    for (i = 0; i < offsetVal; i++) {
+      offsetArrayY[i] = offsetVal * -1 + i;
+      offsetArrayX[i] = offsetVal - i;
+    }
+    */
     offsetX = offsetArrayX[indexVal];
     offsetY = offsetArrayY[indexVal];
     fill(216,201,170);
