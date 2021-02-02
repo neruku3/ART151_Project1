@@ -88,12 +88,12 @@ function setup() {
 
   function keyPressed() {
     /*
-    if (keyCode == UP_ARROW) {
+    if (keyCode == RIGHT_ARROW) {
         if (frameVal + 10 < 250) {
           frameVal = frameVal + 10;
         }
     }
-    else if (keyCode == DOWN_ARROW) {
+    else if (keyCode == LEFT_ARROW) {
         if (frameVal - 10 > 30) {
             frameVal = frameVal - 10;
         }
@@ -112,6 +112,8 @@ function setup() {
       else if (speedy < 0) {
         speedy = speedy - 1;
       }
+      shapeWidth = shapeWidth + 5;
+      shapeHeight = shapeWidth / 2;
     }
     else if (keyCode == DOWN_ARROW) {
       if (speed > 0 && (speed - 1) > 0) {
@@ -126,5 +128,13 @@ function setup() {
       else if (speedy < 0 && (speedy + 1) < 0) {
         speedy = speedy + 1;
       }
+      if ((shapeWidth-5) > 0)
+      {
+        shapeWidth = shapeWidth - 5;
+        shapeHeight = shapeWidth / 2;
+      }
+    }
+    else if (keyCode == CONTROL) {
+      filter(BLUR, 2);
     }
   }
