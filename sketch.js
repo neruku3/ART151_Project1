@@ -40,9 +40,9 @@ function setup() {
     strokeWeight(5);
     stroke(204,153,20);
     rect(reposX, reposY, canvX+10, canvY);
-    fill(200,153,20); // this is the color of the right margin
+    fill(199,153,20); // this is the color of the right margin
     strokeWeight(5);
-    stroke(200,153,20);
+    stroke(199,153,20);
     rect(canvX+reposX, reposY, (windowWidth-(canvX+reposX)), windowHeight);
     filter(BLUR,4);
     alert("Click anywhere within the drawing square to change the position of the lines. Press CTRL to use Gaussian Blur. Press UP / DOWN Arrow to increase / decrease the speed and size of the drawing. Press RIGHT / LEFT arrow to increase / decrease the FPS. I wanted to keep symmetry in my piece, so I created a square in the middle which the drawing occurs on to use reflection. Additionally, I wanted the user to be able to differentiate between the foreground and background and add some depth, so I allowed them to add in a Gaussian Blur whenever they want to. I also created slight color differences between the margins and the drawing space in an attempt to add some depth.");
